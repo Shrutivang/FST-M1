@@ -39,9 +39,8 @@ public class Activity3 {
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
 		
 		// Read login message
-		String loginmessage = driver.findElement(By.cssSelector("h2.text-center")).getText();
-		Assert.assertEquals("Welcome Back, Admin!", loginmessage);
-		
+		String loginMessage = driver.findElement(By.cssSelector("h2.text-center")).getText();
+        Assert.assertEquals("A Simple Login Form!", loginMessage);
 		}
 	
 	@AfterClass
