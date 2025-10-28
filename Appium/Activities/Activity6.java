@@ -1,5 +1,31 @@
 package Activities;
 
+import static org.testng.Assert.assertTrue;
+
+import java.awt.Point;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.time.Duration;
+
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
+
+
+
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
+
 public class Activity6 {
 	AndroidDriver driver;
 	WebDriverWait wait;
@@ -44,6 +70,11 @@ public class Activity6 {
 
 		// Assertions
 		assertTrue(volumeText.contains("75%"));
+	}
+
+	private void doSwipe(AndroidDriver driver2, Point start, Point end, int i) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Test
